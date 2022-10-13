@@ -14,43 +14,132 @@
 <body>
     <h3>Treasure hunt by Sri Tarun</h3>
     <p style="padding-left: 1rem;color:crimson;">Click on the chests to search for treasure</p>
-    <p style="padding-left: 1rem;color:teal;">Number of chests checked is zero.</p>
-    <p style="padding-left: 1rem;color: brown;">Score is unknown.</p>
-    <p style="padding-left: 1rem;color: cornflowerblue;">Help report.</p>
+    <p style="padding-left: 1rem;color:teal;" id="chests">Number of chests checked is zero.</p>
+    <p style="padding-left: 1rem;color: brown;" id="score">Score is unknown.</p>
+    <p style="padding-left: 1rem;color: cornflowerblue;" id="help">Help report.</p>
+    <button id="newbtn" onclick="newGame()">new game</button>
     <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t1" onclick="check(0)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t2" onclick="check(1)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t3" onclick="check(2)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img  id ="t4" onclick="check(3)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t5" onclick="check(4)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
     </div>
     <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t6" onclick="check(5)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t7" onclick="check(6)"   src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t8"onclick="check(7)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t9" onclick="check(8)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t10"onclick="check(9)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
     </div>
     <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="help.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t11"onclick="check(10)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t12"onclick="check(11)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t13"onclick="help()" src="help.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t14"onclick="check(13)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t15" onclick="check(14)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
     </div>
     <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t16"onclick="check(15)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t17"onclick="check(16)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t18"onclick="check(17)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t19"onclick="check(18)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t20" onclick="check(19)"src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
     </div>
     <div class="row" style="padding-left: 5rem;">
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
-        <div class="col-md-2"><img src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t21" onclick="check(20)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t22"onclick="check(21)"  src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t23" onclick="check(22)"src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t24" onclick="check(23)"src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
+        <div class="col-md-2"><img id ="t25" onclick="check(24)" src="treasurehunt.png" alt="treasure hunt" style="width:100px;height:100px"></div>
     </div>
+
+    <script>
+    var ids=["t1","t2","t3","t4","t5","t6","t7","t8","t9","t10","t11","t12","t13","t14","t15","t16","t17","t18","t19","t20","t21","t22","t23","t24","t25"]
+    var chestCount=0
+    var score=0
+    var lastCheck=12
+    var treasureLocation=18
+    function check(position)
+    {
+        if(position==treasureLocation)
+      {
+        document.getElementById(ids[position]).setAttribute("src","treasure.png")
+        score++
+      }
+      else
+      {
+        document.getElementById(ids[position]).setAttribute("src","box.png")
+      }
+      chestCount++
+      lastCheck=position
+      document.getElementById("chests").innerText="Number of chests is "+chestCount+"."
+      document.getElementById("score").innerText="Score is "+score+"."
+
+      lastCheck=position
+    }
+
+    function help()
+  {
+    let lastRow=parseInt((lastCheck/5),10)
+    let treasureRow=parseInt((treasureLocation/5),10)
+    let result=" "
+
+    lastCol=lastCheck%5
+    treasureCol=treasureLocation%5
+
+    console.log(lastCol)
+    console.log(lastRow)
+    console.log(treasureCol)
+    console.log(treasureRow)
+
+    if(lastRow==treasureRow&&lastCheck!=treasureLocation)
+    {
+      if(lastCheck<treasureLocation)
+      {
+        result="Right"
+      }
+      else
+      {
+        result="Left"
+      }
+    }
+    else if(lastCol==treasureCol&&lastCheck!=treasureLocation)
+    {
+      if(lastCheck<treasureLocation)
+      {
+        result="Bottom"
+      }
+      else
+      {
+        result="Up"
+      }
+    }
+    else
+    {
+      result="Sorry, No help available"
+    }
+
+    score=score+2
+    document.getElementById("score").innerText="Score is "+score+"."
+    document.getElementById("help").innerText=result
+
+    function reset()
+        {
+            treasureLocation = Math.floor(Math.random()*25)
+            while(treasureLocation == 12)
+            {
+                treasureLocation = Math.floor(Math.random()*25)
+            }
+            chestCount = 0
+            score = 0
+            document.getElementById("chests").innerHTML = "Number of chests checked is zero"
+            document.getElementById("score").innerHTML = "Score is unknown"
+            for(let i=0;i<25;i++)
+                if(i != 12)
+                    document.getElementById(ids[i]).src = "help.png"
+        }
+  }
+</script>
 </body>
 </html>
